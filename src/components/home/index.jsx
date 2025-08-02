@@ -1,7 +1,17 @@
 import './index.css';
+import Navbar from '../navigation_bar';
 
+const Home = ()=> {
 
-const Home = ()=> <h1>Home page</h1>
+   
+    
+    return (
+    <div className="main">
+        <Navbar/>
+        <h1 style={{color: "red"}}>Home Page</h1>
+    </div>
+     )
+}
 
 
 export default Home;
