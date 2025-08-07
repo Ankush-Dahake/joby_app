@@ -1,8 +1,19 @@
 import './index.css';
 import {Link} from 'react-router-dom';
+import Cookie from 'js-cookie';
 
 
-const Navbar =()=>{
+   const Navbar =(event)=>{
+
+    //   s
+
+    const token = Cookie.get("myToken");
+
+    const onBtn=()=>{
+
+        Cookie.remove("myToken");
+
+    }
 
     return(
         <nav className='main_cont'>
@@ -15,7 +26,7 @@ const Navbar =()=>{
                     <Link to="/jobs" >Jobs</Link>
                 </li>
             </ul>
-            <div><Link className='btn btn-primary'>Logout</Link></div>
+            <div><Link to="/login" onClick={onBtn} className='btn btn-primary'>Logout</Link></div>
         </nav>
     )
 }

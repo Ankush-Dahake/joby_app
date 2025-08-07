@@ -70,17 +70,17 @@ const Login = ()=> {
 
 
     return (
-    <div>
+    <div style={{width:"100%", height:"100vh", backgroundColor:"black", display:"flex", justifyContent:"center", alignItems:"center"}}>
          <form className='form_cont' onSubmit={onSubmitBtn}>
   <div className="form-group">
-    <label>Username</label><br />
-    <input onChange={(e)=>{setVal({...allVal,username : e.target.value})}} type="username" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/><br />
+    <label style={{color:"white"}}>Username</label><br />
+    <input onChange={(e)=>{setVal({...allVal,username : e.target.value})}} type="username" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
     <small id="emailHelp" className="form-text text-muted">We'll never share your username with anyone else.</small>
   </div><br />
   <div className="form-group">
-    <label>Password</label><br />
+    <label style={{color:"white"}}>Password</label><br />
     <input onChange={(e)=>{setVal({...allVal,password : e.target.value})}} type="password" className="form-control" id="exampleInputPassword1"/>
-  </div><br />
+  </div>
   <div><button type="submit" className="btn btn-primary">Submit</button></div>
   <p style={{color: "red"}}>{allVal.errorMess}</p>
 </form>
